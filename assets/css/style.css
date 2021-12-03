@@ -1,0 +1,345 @@
+@font-face {
+  font-family: Custom;
+  src: url("../fonts/ProductSans-Black.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Custom, Arial;
+  -webkit-transition: 210ms;
+  transition: 210ms;
+}
+
+section.container {
+  width: 100%;
+  height: 100vh;
+}
+section.container .row {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section.container .row .main {
+  width: 550px;
+  height: 540px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+section.container .row .main .col-10 {
+  width: 100%;
+}
+section.container .row .main .col-5 {
+  width: 50%;
+}
+section.container .row .main ul {
+  list-style: none;
+}
+section.container .row .main .question-content-main {
+  height: 30%;
+}
+section.container .row .main .question-content-main .current.question {
+  width: 100%;
+  height: 100%;
+}
+section.container .row .main .question-content-main .current.question .instruction {
+  width: 100%;
+  height: 50%;
+  padding-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #777;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+}
+section.container .row .main .question-content-main .current.question .quest {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-left: 50px;
+  font-size: 25px;
+}
+section.container .row .main .answers-content-main {
+  height: 60%;
+}
+section.container .row .main .answers-content-main ul {
+  width: 90%;
+  height: 100%;
+}
+section.container .row .main .answers-content-main ul .ans-item {
+  width: 100%;
+  height: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+}
+section.container .row .main .answers-content-main ul .ans-item:hover::after {
+  content: "";
+  width: 110%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -5%;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.15);
+}
+section.container .row .main .answers-content-main ul .ans-item .some {
+  width: 90%;
+  font-size: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section.container .row .main .answers-content-main ul .ans-item .radio {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+section.container .row .main .navigators-content-main {
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+section.container .row .main .navigators-content-main .--previous {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section.container .row .main .navigators-content-main .next-- {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ripple {
+  position: absolute;
+  pointer-events: none;
+  background: black;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  -webkit-animation: ripple 500ms linear infinite;
+          animation: ripple 500ms linear infinite;
+}
+
+@-webkit-keyframes ripple {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  to {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  to {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type=radio] {
+  position: absolute;
+  right: 1000%;
+}
+
+label {
+  float: left;
+  width: 15%;
+  padding-bottom: 15%;
+  margin: 0 2.5%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#slider {
+  position: absolute;
+  left: 0%;
+  top: 0;
+  width: 10%;
+  padding-bottom: 10%;
+  margin: 2.5% 0 0 5%;
+  background: #000;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  border-radius: 50%;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transition: 0.2s left 0.05s ease-in-out;
+  transition: 0.2s left 0.05s ease-in-out;
+}
+
+#input1:checked ~ #slider {
+  -webkit-animation-name: input1;
+          animation-name: input1;
+  left: 0;
+}
+
+#input2:checked ~ #slider {
+  -webkit-animation-name: input2;
+          animation-name: input2;
+  left: 20%;
+}
+
+#input3:checked ~ #slider {
+  -webkit-animation-name: input3;
+          animation-name: input3;
+  left: 40%;
+}
+
+#input4:checked ~ #slider {
+  -webkit-animation-name: input4;
+          animation-name: input4;
+  left: 60%;
+}
+
+#input5:checked ~ #slider {
+  -webkit-animation-name: input5;
+          animation-name: input5;
+  left: 80%;
+}
+
+@-webkit-keyframes input1 {
+  30%, 70% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@keyframes input1 {
+  30%, 70% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+@-webkit-keyframes input2 {
+  30%, 70% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+@keyframes input2 {
+  30%, 70% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+@-webkit-keyframes input3 {
+  30%, 70% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+@keyframes input3 {
+  30%, 70% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+@-webkit-keyframes input4 {
+  30%, 70% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+@keyframes input4 {
+  30%, 70% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+@-webkit-keyframes input5 {
+  30%, 70% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+@keyframes input5 {
+  30%, 70% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}

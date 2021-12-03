@@ -1,0 +1,45 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="../assets/css/style.css")
+        title English Tester
+    body 
+        section.container 
+            .row 
+                .main 
+                    .col-10.question-content-main
+                        .row 
+                            .current.question 
+                                .instruction
+                                    p choose the correct answer
+                                .quest
+                                    p I need .... money
+                    .col-10.answers-content-main 
+                        .row 
+                            ul#list.list
+                                li.ans-item#rippleBtn 
+                                    .radio#radios 
+                                        input(type="radio" name='same' id="input1")
+                                    .some some
+                                li.ans-item#rippleBtn
+                                    .radio 
+                                        input(type="radio" name='same' id="input2")
+                                    .some any 
+                                li.ans-item#rippleBtn
+                                    .radio 
+                                        input(type="radio" name='same' id="input3")
+                                    .some more
+                                li.ans-item#rippleBtn
+                                    .radio 
+                                        input(type="radio" name='same' id="input4")
+                                    .some never
+                    .col-10.navigators-content-main
+                        .col-5.--previous 
+                            button#preBtn Previous 
+                        .col-5.next--
+                            button#nextBtn Next
+    script(src="https://cdn.jsdelivr.net/gh/strange-bs/strange-js/js/strange.js")
+    script(src="../assets/js/main.js") 

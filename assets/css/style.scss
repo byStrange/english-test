@@ -1,0 +1,268 @@
+@font-face {
+
+    font-family: Custom;
+    src: url('../fonts/ProductSans-Black.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Custom, Arial;
+    transition: 210ms;
+}
+
+section.container {
+    width: 100%;
+    height: 100vh;
+
+    .row {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .main {
+            width: 550px;
+            height: 540px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .col-10 {
+                width: 100%;
+            }
+
+            .col-5 {
+                width: 50%;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            .question-content-main {
+                height: 30%;
+
+                .current.question {
+                    width: 100%;
+                    height: 100%;
+
+                    .instruction {
+                        width: 100%;
+                        height: 50%;
+                        padding-left: 20px;
+                        display: flex;
+                        align-items: center;
+                        color: #777;
+                        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+                    }
+
+                    .quest {
+                        width: 100%;
+                        height: 50%;
+                        display: flex;
+                        align-self: center;
+                        padding-left: 50px;
+                        font-size: 25px;
+
+                    }
+                }
+            }
+
+            .answers-content-main {
+                height: 60%;
+
+                ul {
+                    width: 90%;
+                    height: 100%;
+
+                    .ans-item {
+                        width: 100%;
+                        height: 25%;
+                        display: flex;
+                        cursor: pointer;
+                        position: relative;
+
+                        &:hover::after {
+                            content: '';
+                            width: 110%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: -5%;
+                            z-index: 10;
+                            background: rgba(0, 0, 0, .15);
+                        }
+
+                        .some {
+                            width: 90%;
+                            font-size: 25px;
+                            display: flex;
+                            justify-content: start;
+                            align-items: center;
+                        }
+
+                        .radio {
+                            width: 10%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            position: relative;
+                        }
+
+                    }
+                }
+            }
+
+            .navigators-content-main {
+                height: 10%;
+                display: flex;
+                justify-content: center;
+
+                .--previous {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .next-- {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+.ripple {
+    position: absolute;
+    pointer-events: none;
+    background: black;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: ripple 500ms linear infinite;
+}
+
+@keyframes ripple {
+    from {
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+    }
+
+    to {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+input[type="radio"] {
+    position: absolute;
+    right: 1000%;
+}
+
+label {
+    float: left;
+    width: 15%;
+    padding-bottom: 15%;
+    margin: 0 2.5%;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#slider {
+    position: absolute;
+    left: 0%;
+    top: 0;
+    width: 10%;
+    padding-bottom: 10%;
+    margin: 2.5% 0 0 5%;
+    background: #000;
+    transition: transform 1s;
+    border-radius: 50%;
+    animation-timing-function: ease-in-out;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    transition: 0.2s left .05s ease-in-out;
+}
+
+#input1:checked~#slider {
+    animation-name: input1;
+    left: 0;
+}
+
+#input2:checked~#slider {
+    animation-name: input2;
+    left: 20%;
+}
+
+#input3:checked~#slider {
+    animation-name: input3;
+    left: 40%;
+}
+
+#input4:checked~#slider {
+    animation-name: input4;
+    left: 60%;
+}
+
+#input5:checked~#slider {
+    animation-name: input5;
+    left: 80%;
+}
+
+@keyframes input1 {
+
+    30%,
+    70% {
+        transform: scale(0.5);
+    }
+}
+
+@keyframes input2 {
+
+    30%,
+    70% {
+        transform: scale(0.5);
+    }
+}
+
+@keyframes input3 {
+
+    30%,
+    70% {
+        transform: scale(0.5);
+    }
+}
+
+@keyframes input4 {
+
+    30%,
+    70% {
+        transform: scale(0.5);
+    }
+}
+
+@keyframes input5 {
+
+    30%,
+    70% {
+        transform: scale(0.5);
+    }
+}
